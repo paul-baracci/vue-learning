@@ -1,12 +1,17 @@
 <template>
+<div>
+  <Alert />
   <Form />
+</div>
 </template>
 
 <script>
 import Form from "./components/Form.vue";
+import Alert from "./components/Alert.vue";
+
 export default {
   name: "App",
-  components: { Form },
+  components: { Form, Alert },
 };
 </script>
 

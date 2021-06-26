@@ -1,10 +1,9 @@
 <template>
   <div class="container d-flex justify-content-center">
-    
     <form @submit.prevent="handleSubmit"  >
       <div class="row text-center">
-      <h1>Order submit form</h1>
-    </div>
+        <h1>Order submit form</h1>
+      </div>
       <div class="row my-3" >
         <div class="form-group">                       
             <input type="text" class="form-control" placeholder="Full Name" required v-model="fullName" />
@@ -62,6 +61,7 @@
 
 <script>
 export default {
+  el: '#alert',
   data() {
     return {
       fullName: "",
@@ -88,6 +88,12 @@ export default {
       console.log(this.deliveryTime)
       console.log(this.comment)
       console.log(this.terms)
+    },
+    showAlert(event) {
+      alert('Hello')
+      if (event) {
+        alert(event.target.tagName)
+      }
     },
   },
 };
