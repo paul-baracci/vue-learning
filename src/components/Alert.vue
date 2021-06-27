@@ -1,5 +1,5 @@
 <template>
-  <div :class="[alert, alertType]" >  
+  <div :class="[alert, alertType]">
     <slot></slot>
     <strong>Message</strong> Text
     <span class="btn closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -11,7 +11,7 @@ export default {
   props: {
     type: {
       type: String,
-      required: true,
+      // required: true,
       validator: function (value) {
         return ['info', 'success', 'danger', 'warning'].indexOf(value) !== -1;
       }

@@ -1,5 +1,6 @@
 <template>
-<div>
+<div class="container">
+  <Shop />
   <Alert />
   <Form />
 </div>
@@ -8,10 +9,11 @@
 <script>
 import Form from "./components/Form.vue";
 import Alert from "./components/Alert.vue";
+import Shop from "./components/Shop.vue";
 
 export default {
   name: "App",
-  components: { Form, Alert },
+  components: { Form, Alert, Shop },
 };
 </script>
 
