@@ -1,8 +1,10 @@
 <template>
 <div class="container">
-  <Shop />
-  <Alert />
-  <Form />
+  <!-- <Alert /> -->
+  <nav class="nav nav-tabs justify-content-center">
+    <a class="nav-link" href="#" v-for="tab in tabs" :key="tab" @click="selected = tab; ">{{tab}}</a>
+  </nav>
+  <component :is="selected"></component>
 </div>
 </template>
 
@@ -13,6 +15,12 @@ import Shop from "./components/Shop.vue";
 
 export default {
   name: "App",
+  data: function() {
+    return {
+      tabs: ["Shop", "Form", "Alert"],
+      selected: "Shop"
+    };
+  },
   components: { Form, Alert, Shop },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div :class="[alert, alertType]">
     <slot></slot>
-    <strong>Message</strong> Text
+    <strong>Message </strong> Text
     <span class="btn closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
   computed: {
     alertType() {
       // return `alert-${this.type}`;
-      return `alert-warning`
+      return `alert-danger`;
     }
   },
   data() {
